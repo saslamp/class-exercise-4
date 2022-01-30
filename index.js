@@ -177,4 +177,5 @@ const main = () => {
   buildMocha();
 };
 
+// launch the app
 main();

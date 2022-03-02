@@ -1,11 +1,12 @@
 // import readline module for getting input from the console
+import * as readLine  from "readline";
 
 const rl = readLine.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-const menuQ = () => {
+const menuQ = ():Promise<string> => {
   return new Promise((resolve, reject) => {
     try{
       rl.question('your choice: ', (answer) => {
@@ -18,7 +19,7 @@ const menuQ = () => {
   });
 }
 
-const milkQ = () => {
+const milkQ = ():Promise<string> => {
   return new Promise((resolve, reject) => {
     try{
       rl.question('How many cups of milk to add? ', (answer) => {
@@ -31,7 +32,7 @@ const milkQ = () => {
   });
 }
 
-const espressoQ = () => {
+const espressoQ = ():Promise<string> => {
   return new Promise((resolve, reject) => {
     try{
       rl.question('How many shots of espresso to add? ', (answer) => {
@@ -44,7 +45,7 @@ const espressoQ = () => {
   });
 }
 
-const peppermintQ = () => {
+const peppermintQ = ():Promise<string> => {
   return new Promise((resolve, reject) => {
     try{
       rl.question('How many shots of peppermint to add? ', (answer) => {
